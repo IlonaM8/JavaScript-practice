@@ -1,13 +1,15 @@
 const students = ['Paul', 'George', 'Lucas'];
 
 function addStudent(student) {
-  // ...
+
+  students.push('Marco');
+  
 }
 
 addStudent('Marco');
 
 
-students.push('Marco');
+
 
 console.log(students);
 

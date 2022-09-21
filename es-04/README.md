@@ -8,3 +8,5 @@ Per ogni ruolo il salario percepito è il seguente:
 - cto => 1800€
 - developer => 1500€
 - default => 1000€
+
+Hint: La funzione calculateSalary() prende un parametro in ingresso, il ruolo, controllare se il ruolo è uguale ad uno di quelli presenti nella descrizione e restituire il salario corretto.
