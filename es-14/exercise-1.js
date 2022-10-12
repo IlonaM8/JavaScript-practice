@@ -1,5 +1,9 @@
+
+// ho dimenticato la virgola
 function greet(greeting) {
-  // ...
+  return function(name){
+    return greeting + ', ' + name;
+  }
 }
 
 const greetWithHello = greet('Hello');

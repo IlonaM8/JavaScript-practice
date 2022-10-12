@@ -1,5 +1,5 @@
 function firstUncompletedNote(notes) {
-  // ...
+  return notes.find(note => note.todos.some(todo => todo.done === !true))
 }
 
 const notes = [

@@ -16,3 +16,4 @@ const person = {
 const keys = getKeys(person);
 console.log(keys); // ['firstName', 'lastName', 'age', 'city', 'job']
 ```
+HInt: In Javascript è possibile ciclare un oggetto attraverso un determinato tipo di ciclo for.

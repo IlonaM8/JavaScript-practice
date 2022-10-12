@@ -1,4 +1,4 @@
-const concat = function (arr1, arr2) {
+const concat = (arr1, arr2) => {
   return arr1.concat(arr2);
 }
 

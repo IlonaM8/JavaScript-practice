@@ -1,6 +1,18 @@
 function uncompletedNotes(notes) {
-  // ...
+  
+  return notes.filter(note => note.todos.some(todo => todo.done === false));
+ 
+//return notes.filter((el) => el + notes.todos.done === false)
+
+  // let test = (el) => el.todos.done === false
+  // return notes.some(el)
+
+  // return notes.even(el => el.notes.todos[done] === false)
+  
+  //return notes.includes(false);
+
 }
+
 
 const notes = [
   {
@@ -51,6 +63,11 @@ const notes = [
     ]
   }
 ]
+
+//test 
+// let test1 = notes[0].todos[0].done;
+// console.log(test1);
+
 
 const notesInProgress = uncompletedNotes(notes);
 console.log('All notes: ', notes);
