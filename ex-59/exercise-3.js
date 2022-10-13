@@ -34,3 +34,38 @@ function fetchPersonById(id) {
 }
 
 // core here
+const fetchPerson = fetchPersonById(3);
+
+fetchPerson.
+then((fetchPerson) => console.log(JSON.parse(fetchPerson)))
+.catch((er) => console.log(er));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ex starter
+// // function fetchPersonById(id) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const person = persons.find(item => item.id === id);
+      
+//       if (person) {
+//         return resolve(JSON.stringify(person));
+//       }
+
+//       return reject(`Person with id: ${id} doesn't exist`);
+//     }, 1000);
+//   });
+// }

@@ -19,6 +19,53 @@ const persons = [
   }
 ];
 
+
+
+
+//versione ccorretta!
+function fetchPersonById(id) {
+  const person = persons.find(item => item.id === id)
+  
+  return new Promise((resolve, reject)=> {
+    if(person){
+      resolve(person);
+
+    } else if(!person){
+      reject('id not here');
+    }
+    
+    
+    } )
+
+  
+}
+
+fetchPersonById(3)
+.then((person) => console.log(person))
+.catch((er) => console.log(er));
+
+
+
+
+//quindi ti fai la condizione if(person) quindi se trova l'id resolve else reject, o al contrario if(!person) quindi non c'è l'id  reject else resolve
+
+
+
+
+
+//ex starter
+// function fetchPersonById(id) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => resolve(persons.find(item => item.id === id)), 1000);
+//   });
+// }
+
+// fetchPersonById(2).then((person) => console.log(person));
+
+
+
+
+
 // function fetchPersonById(id) {
 //   return new Promise((resolve, reject) => {
 //     if(persons.id === id){
@@ -35,44 +82,3 @@ const persons = [
 // fetchPersonById(1).then((person) => console.log(person));
 
 // console.log('hello, there')
-
-
-
-
-
-
-
-//another version 
-function fetchPersonById(id) {
-  
-  return new Promise((resolve, reject)=> {
-    if(persons.find(item => item.id === null)){
-      reject('Not here');
-    } else {
-      setTimeout(function(){
-        resolve(persons.find(item => item.id === id), 1000);
-      });
-    }
-
-  })
-  
-}
-
-fetchPersonById(4).then((person) => console.log(person));
-
-console.log('hello, there')
-
-
-
-
-
-
-
-//ex starter
-// function fetchPersonById(id) {
-//   return new Promise((resolve) => {
-//     setTimeout(() => resolve(persons.find(item => item.id === id)), 1000);
-//   });
-// }
-
-// fetchPersonById(2).then((person) => console.log(person));
