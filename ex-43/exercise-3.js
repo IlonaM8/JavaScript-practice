@@ -2,6 +2,7 @@ class NegativeAmountError extends Error {
   constructor(message){
     super(message);
     this.name = 'NegativeAmountError';
+    console.log('Negative amount')
   }
 }
 
@@ -9,6 +10,7 @@ class WithdrawNotPermittedError extends Error {
   constructor(message){
     super(message);
     this.name = 'WithdrawNotPermittedError';
+    console.log('Cannot withraw more than you have')
   }
 
 }
@@ -26,6 +28,7 @@ class BankAccount {
 
     if (amount < 0) {
       // throw new Error('The amount provided cannot be negative'); // Use custom Error class
+      new NegativeAmountError();
      
     }
 
@@ -34,11 +37,13 @@ class BankAccount {
 
   withdraw(amount) {
     if (amount < 0) {
-      throw new Error('The amount provided cannot be negative'); // Use custom Error class
+      // throw new Error('The amount provided cannot be negative'); // Use custom Error class
+      new NegativeAmountError();
     }
 
     if (this.#amount < amount) {
-      throw new Error('You cannot withdraw more than account balance'); // Use custom Error class
+      // throw new Error('You cannot withdraw more than account balance'); // Use custom Error class
+      new WithdrawNotPermittedError()
     }
 
     this.#amount -= amount;

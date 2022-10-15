@@ -23,23 +23,23 @@ const bici = [
    {nome: 'bici4', peso: 60},
 ]
 
-// let biciLeggera = bici[0];
+let biciLeggera = bici[0];
 
-// bici.forEach(bike => {
-//     if(bike.peso < biciLeggera.peso){
-//          biciLeggera = bike;
-//     }
+bici.forEach(bike => {
+    if(bike.peso < biciLeggera.peso){
+         biciLeggera = bike;
+    }
 
 
-// })
+})
 
-// console.log(biciLeggera);
+console.log(biciLeggera);
 
 // const biciLeggera = bici.sort((a, b) => a.peso - b.peso)[0];
 // console.log(biciLeggera);
 
-// const {nome, peso} = biciLeggera; 
-// console.log( ` La bici con il ${nome} e il peso di ${peso} è la bici più leggera!`);
+const {nome, peso} = biciLeggera; 
+console.log( ` La bici con il ${nome} e il peso di ${peso} è la bici più leggera!`);
 
 
 
@@ -85,16 +85,16 @@ const bici = [
 
 
 //risposta terza
-function sum(num1, num2){
-    if( num2 === 0){
+// function sum(num1, num2){
+//     if( num2 === 0){
 
-    }
+//     }
 
-    if( typeof num1 === 'number' && typeof num2 === 'number' ){
-        console.log( num1 + num2);
-    } else{
-        console.error(`non è un numero`);
-    }
-}
+//     if( typeof num1 === 'number' && typeof num2 === 'number' ){
+//         console.log( num1 + num2);
+//     } else{
+//         console.error(`non è un numero`);
+//     }
+// }
 
-sum(1, 3);
+// sum(1, 3);
