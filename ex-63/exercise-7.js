@@ -38,3 +38,37 @@ function fetchPersonById(id) {
   const person = await JSON.parse(personJson);
   console.log(person);
 })();
+
+// let rejectPromise = fetchPersonById();
+// rejectPromise.catch((reject) => {
+//   console.log(reject);
+// })
+
+
+
+
+
+
+
+
+
+//code starter
+// function fetchPersonById(id) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const person = persons.find(item => item.id === id);
+
+//       if (person) {
+//         return resolve(JSON.stringify(person));
+//       }
+
+//       return reject(`Person with id: ${id} doesn't exist`);
+//     }, 1000);
+//   });
+// }
+
+// (async () => {
+//   const personJson = await fetchPersonById(4);
+//   const person = await JSON.parse(personJson);
+//   console.log(person);
+// })();

@@ -33,6 +33,16 @@ function fetchPersonById(id) {
   });
 }
 
+
+
+async function personId(){
+  let personTwoId = await fetchPersonById(2);
+  console.log(personTwoId);
+}
+
+
+
+
 fetchPersonById(2)
   .then((personJson) => JSON.parse(personJson))
   .then((person) => console.log(person))
