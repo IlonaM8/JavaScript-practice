@@ -2,6 +2,7 @@ const myForm = document.getElementById('person-form');
 
 const button = document.querySelector('button');
 
+
 console.log(myForm);
 
 function initForm(){
@@ -44,8 +45,12 @@ function submitPersonForm(event){
     console.log(person);
 
 }
-
+ 
 button.addEventListener('click', submitPersonForm );
+
+
+
+
 
 
 
