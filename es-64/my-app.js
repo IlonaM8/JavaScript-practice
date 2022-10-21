@@ -32,7 +32,7 @@ function savePost() {
         for (const [key, value] of Object.entries(obj)) {
             window.localStorage.setItem(key, value);   
         }
-        console.log('Your post has been saved in the storage');
+        console.log('Your post has been saved in Local Storage');
 
     }catch(error){
         console.log(error);
