@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', initForm);
 function submitPersonForm(event){
     button.style.backgroundColor = 'pink';
     event.preventDefault();
-    // come acceddo all'input value??
+    
     let person = {
        firstName: document.querySelector('[value="First Name"]').value,
        lastName: document.querySelector('[value="Last Name"]').value,
