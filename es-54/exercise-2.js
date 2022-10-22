@@ -5,20 +5,37 @@ const person = {
   age: 25
 };
 
+
+
+const { id , ...personInfo} = person;
+
+console.log(personInfo);
+
+
+
+
+
+//Esempio:
+//  const dog = { id: 3, name: 'corki', breed: 'corgi' };
+
+//  const { id, ...dogInfo } = dog;
+
+
+
+
+
+
+
+
 // const id = person.id;
 
-const { id } = person;
+// const { id } = person;
 
-const personInfo = {
-  firstName: person.firstName,
-  lastName: person.lastName,
-  age: person.age
-};
+// const personInfo = {
+//   firstName: person.firstName,
+//   lastName: person.lastName,
+//   age: person.age
+// };
 
-const { firstName, lastName, age } = personInfo;
-
-
-
-console.log({ ...{ id }}, {...personInfo});
-
+// const { firstName, lastName, age } = personInfo;
 
