@@ -22,10 +22,6 @@ heroWoman.addEventListener('mouseout', transparentColor);
 
 
 
-
-
-
-
 //solved 
 
 const otherHero = document.getElementsByClassName('hero-list-item');
@@ -40,8 +36,7 @@ const otherHero = document.getElementsByClassName('hero-list-item');
 for(const el of otherHero){
     el.addEventListener('mouseover', function turnRed(){
         console.log('hi there, is this working?');
-        el.style.backgroundColor = 'red';
-        
+        el.style.backgroundColor = 'red'; 
     })
 }
 
@@ -50,8 +45,7 @@ for(const el of otherHero){
 for(const el of otherHero){
     el.addEventListener('mouseout', function turnTrasp(){
         console.log('is this normal?');
-        el.style.backgroundColor = 'transparent';
-        
+        el.style.backgroundColor = 'transparent'; 
     })
 }
 
@@ -60,8 +54,7 @@ for(const el of otherHero){
 
 
 
+/*"Funziona, per scriverlo in maniera più concisa e pulita avresti potuto anche utilizzare il querySelectorAll 
+e con un forEach ciclarti ogni singolo hero e inserire i due event listener. Ma anche così va bene."
 
-
-
-
-
+*/

@@ -34,4 +34,53 @@ const jobs = [
   }
 ];
 
-// core here
+// code here
+
+const  fetchPersonById = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const person = persons.find(item => item.id === id);
+      // console.log(person)
+
+      if(person){
+        // return resolve(JSON.stringify(person));
+       return resolve(person);
+      } 
+      return reject(`Person with id: ${id} doesn't exist`);
+
+    }, 1000);
+
+
+  })
+
+}
+
+// const fetchPerson = fetchPersonById(2);
+
+
+const fetchJobById = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const jobT = jobs.find(item => item.id === id);
+      // console.log(jobT)
+
+      if(jobT){
+        // return resolve(JSON.stringify(jobs));
+        return resolve(jobT);
+      } 
+      return reject(`Person with id: ${id} doesn't exist`);
+    }, 500);
+  
+})}
+
+
+// const job = fetchJobById(2);
+
+
+Promise.race([fetchPersonById(2), fetchJobById(2)])
+.then((resolve) => {
+  console.log(resolve);
+})
+.catch((reject) =>{
+  console.log(reject);
+})

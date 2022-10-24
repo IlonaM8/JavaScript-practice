@@ -70,18 +70,22 @@
     form.prepend(firstNameInput);
 
     form.addEventListener("submit", submitPersonForm);
+
+
+     //my code
+  const personFormLoaded = new Event ('personFormLoaded');
+  form.dispatchEvent(personFormLoaded);
+
   }
 
   window.addEventListener("DOMContentLoaded", initForm);
 
+  document.getElementById('person-form').addEventListener('personFormLoaded', () => {
+    console.log("Person Form Loaded");
 
-  //my code
-  const personFormLoaded = () => {
-    console.log('Person Form Loaded');
+  })
 
-  }
-
-  window.addEventListener("DOMContentLoaded", personFormLoaded);
+ 
 
 
 

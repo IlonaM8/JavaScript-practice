@@ -24,12 +24,18 @@ function fetchPersonById(id) {
     setTimeout(() => {
       const person = persons.find(item => item.id === id);
 
-      if (person) {
+      try{
+        if (person) {
         return resolve(JSON.stringify(person));
+      } else {
+        reject(`Person with id: ${id} doesn't exist`)
       }
 
-      return reject(`Person with id: ${id} doesn't exist`);
+      }catch(error){
+        console.log(error);
+      }
     }, 1000);
+    console.log('Everything else is working :) ooo, huuhuu!');
   });
 }
 
@@ -39,10 +45,10 @@ function fetchPersonById(id) {
   console.log(person);
 })();
 
-// let rejectPromise = fetchPersonById();
-// rejectPromise.catch((reject) => {
-//   console.log(reject);
-// })
+
+
+
+
 
 
 

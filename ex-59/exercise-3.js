@@ -24,6 +24,7 @@ function fetchPersonById(id) {
     setTimeout(() => {
       const person = persons.find(item => item.id === id);
       
+      
       if (person) {
         return resolve(JSON.stringify(person));
       }
